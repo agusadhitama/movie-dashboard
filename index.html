@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Now Playing Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🎬 Now Playing Dashboard</h1>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search movie...">
+      <select id="genre-filter">
+        <option value="">All Genres</option>
+      </select>
+      <label>Min Rating: <span id="rating-value">0</span></label>
+      <input type="range" id="rating-filter" min="0" max="10" step="1" value="0">
+      <span class="range-tooltip" id="rating-tooltip">0</span>
+      <button id="toggle-dark">🌙</button>
+    </div>
+  </header>
+
+  <!-- Movie container -->
+  <main id="movie-container"></main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <iframe id="trailer" width="100%" height="400" src="" title="YouTube trailer" frameborder="0" allowfullscreen></iframe>
+      <div class="modal-buttons">
+        <button id="favorite-btn">❤️ Add to Favorites</button>
+        <button id="share-btn">🔗 Share</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
